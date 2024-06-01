@@ -18,18 +18,18 @@ pipeline {
 	    }
 	}
 
-	stage ('Deploy to Nexus'){
-	    steps {
-	        withMaven(maven : 'Maven'){
-		    sh 'mvn deploy'
-		}
-	    }
-	}
-	stage ('Deploy to QA'){
-	    steps {
-	            sh 'sudo ansible-playbook /etc/ansible/main.yml'
-	    }
-	}
+	// stage ('Deploy to Nexus'){
+	//     steps {
+	//         withMaven(maven : 'Maven'){
+	// 	    sh 'mvn deploy'
+	// 	}
+	//     }
+	// }
+	// stage ('Deploy to QA'){
+	//     steps {
+	//             sh 'sudo ansible-playbook /etc/ansible/main.yml'
+	//     }
+	// }
 
     }
 }
