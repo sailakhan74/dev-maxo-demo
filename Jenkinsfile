@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Ansible-Master' }
+    // agent { label 'Ansible-Master' }
     
     stages {
     	/*stage ('Code Analysis'){
